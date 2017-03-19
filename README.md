@@ -1,6 +1,9 @@
 # romanian_noise_tests
-Samples and visualization of a small test for speech synthesis.
+Samples and visualization of a small test for speech synthesis - description below.
 
+Listen on youtube in this playlist: https://www.youtube.com/watch?v=_Yaf2uETvHg&list=PLRMa_gJ8vx8kS72M3idtwB-honoArlkAR&index=1
+
+![chart_goes_here](https://raw.githubusercontent.com/kastnerkyle/romanian_noise_tests/master/romanian_multispeaker_noise_chart.jpg)
 
 Cost here is MSE over a 63 dimensional vector. Details can be seen in our workshop paper for char2wav http://josesotelo.com/speechsynthesis/ . Training with extremely high levels of noise is a key part of getting this model to work, so studying annealing the noise is something I have been working on. 
 
@@ -26,10 +29,6 @@ sample_0_* is a sample that is generally good for all 3 speakers, there is a bit
 sample_6_* is a sample that is generally bad for all speakers - it seems like the attention stops working at the tail end to comedic effect.
 
 
-See it on youtube in this playlist: https://www.youtube.com/watch?v=_Yaf2uETvHg&list=PLRMa_gJ8vx8kS72M3idtwB-honoArlkAR&index=1
-
-
 Videos made with this script: https://gist.github.com/kastnerkyle/d8205ff521dbee3061d9b5ccd3dde8f8
 
 
-![chart_goes_here](https://raw.githubusercontent.com/kastnerkyle/romanian_noise_tests/master/romanian_multispeaker_noise_chart.jpg)
