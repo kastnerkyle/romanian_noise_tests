@@ -18,18 +18,16 @@ I sampled at each of 5 training stages: noise std 4. (the primary curve), noise 
 Note that these stages correspond to *training noise* - at sampling time we always have 0 noise, and *sampling* in this model is not stochastic - we always take the prediction from the output layer, which is also the mean of some gaussian with fixed variance when viewed as a mixture density network.
 
 
-Jose recommend only annealing to noise 1. to me from his experiments, and it indeed seems annealing to noise std 1. works the best in this case in a new language entirely. This is documented in the paper. Interestingly, not annealing at all *also* works pretty well.
+Jose recommend only annealing to noise 1. to me from his experiments, and it indeed seems annealing to noise std 1. works the best in this case in a new language entirely. This is documented in the paper. Interestingly, not annealing at all (staying at 4.) *also* works pretty well.
 
 
 This curve represents about 2 weeks of training - 125 epochs at about 9000 seconds an epoch, or 312.5 hours, or 13.02 days.
 
 
-sample_0_* is a sample that is generally good for all 3 speakers, there is a bit of fluctuation in the start/cutoff due to the voice detector I am using and the unreasonably weird noises the vocoder tends to make.
+sample_0_* is a sample that is generally good for all 3 speakers, there is a bit of fluctuation in the start/cutoff due to the voice up/down detector I am using and the unreasonably weird noises the vocoder tends to make at the end.
 
 
 sample_6_* is a sample that is generally bad for all speakers - it seems like the attention stops working at the tail end to comedic effect.
 
 
 Videos made with this script: https://gist.github.com/kastnerkyle/d8205ff521dbee3061d9b5ccd3dde8f8
-
-
